@@ -1,0 +1,75 @@
+﻿<Page x:Class="TRPO_pr9.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TRPO_pr9"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.ColumnSpan="2" Style="{StaticResource HorizonalStackPanel}">
+            <Button Content="Создать пациента" Style="{StaticResource MainPageButton}" Click="PatientCreateButton_Click"/>
+            <Button Content="Начать прием" Style="{StaticResource MainPageButton}" Click="InspectionButton_Click"/>
+            <Button Content="Изменить информацию" Style="{StaticResource MainPageButton}" Click="PatientEditButton_Click"/>
+            <Button Content="Выход" Style="{StaticResource MainPageButton}" Click="BackButton_Click"/>
+            <Button Content="Сменить тему" Style="{StaticResource MainPageButton}" Click="ChangeThemeButton_Click"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" DataContext="{Binding CurrentDoctor}">
+
+            <Label Content="Информация о докторе:" Style="{StaticResource MainPageLabel}"/>
+
+            <Label Content="Фамилия:"/>
+            <Label Content="{Binding Path=LastName, Mode=OneWay}"/>
+
+            <Label Content="Имя:"/>
+            <Label Content="{Binding Path=Name, Mode=OneWay}"/>
+
+            <Label Content="Отчетво:"/>
+            <Label Content="{Binding Path=MiddleName, Mode=OneWay}"/>
+
+            <Label Content="Специализация:"/>
+            <Label Content="{Binding Path=Specialization, Mode=OneWay}"/>
+        </StackPanel>
+
+        <ListView 
+            Grid.Row="1"
+            Grid.Column="1"
+            ItemsSource="{Binding Patients}"
+            SelectedItem="{Binding SelectedPatient}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel Style="{StaticResource HorizonalStackPanel}">
+                            <TextBlock Text="ФИО: "/>
+                            <TextBlock Text="{Binding FullName, Mode=OneWay}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource HorizonalStackPanel}">
+                            <TextBlock Text="День рождения: "/>
+                            <TextBlock Text="{Binding Birthday, Mode=OneWay}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource HorizonalStackPanel}">
+                            <TextBlock Text="Номер телефона: "/>
+                            <TextBlock Text="{Binding PhoneNumber, Mode=OneWay}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource HorizonalStackPanel}">
+                            <TextBlock Text="Дата последнего осмотра: "/>
+                            <TextBlock Text="{Binding LastAppointment, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

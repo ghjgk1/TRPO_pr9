@@ -1,0 +1,37 @@
+﻿<Page x:Class="TRPO_pr9.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TRPO_pr9"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Grid Style="{StaticResource LoginPageGrid}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="185"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Идентификатор"/>
+        <TextBox Text="{Binding Path=ID, Mode=OneWayToSource}" Grid.Column="1"/>
+
+        <Label Grid.Row="1" Content="Пароль"/>
+        <TextBox Text="{Binding Path=Password, Mode=OneWayToSource}" Grid.Row="1" Grid.Column="1"/>
+
+        <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Войти" Click="UserEnterButton_Click" Style="{StaticResource LoginPageButton}"/>
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Зарегистрироваться" Click="UserRegButton_Click" Style="{StaticResource LoginPageButton}"/>
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Cменить тему" Click="ChangeThemeButton_Click" Style="{StaticResource LoginPageButton}"/>
+    </Grid>
+</Page>
