@@ -32,6 +32,5 @@
         <Button Grid.Row="2" Grid.ColumnSpan="2" Content="Войти" Click="UserEnterButton_Click" Style="{StaticResource LoginPageButton}"/>
 
         <Button Grid.Row="3" Grid.ColumnSpan="2" Content="Зарегистрироваться" Click="UserRegButton_Click" Style="{StaticResource LoginPageButton}"/>
-        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Cменить тему" Click="ChangeThemeButton_Click" Style="{StaticResource LoginPageButton}"/>
     </Grid>
 </Page>

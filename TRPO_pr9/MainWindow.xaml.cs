@@ -30,5 +30,10 @@ namespace TRPO_pr9
             InitializeComponent();
             MainFrame.Navigate(new LoginPage());
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeHelper.Toggle();
+        }
     }
 }

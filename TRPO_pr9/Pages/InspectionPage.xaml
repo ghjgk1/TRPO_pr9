@@ -39,7 +39,6 @@
             <Button Content="Сохранить информацию о осмотре" Style="{StaticResource InspectionPageButton}" Click="InspectionButton_Click"/>
             <Button Content="Изменить информаию о пациенте" Style="{StaticResource InspectionPageButton}" Click="EditButton_Click"/>
             <Button Content="Назад" Style="{StaticResource InspectionPageButton}" Click="BackButton_Click"/>
-            <Button Content="Сменить тему" Style="{StaticResource InspectionPageButton}" Click="ChangeThemeButton_Click"/>
 
         </StackPanel>
         <ListView

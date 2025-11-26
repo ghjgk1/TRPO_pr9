@@ -74,10 +74,5 @@ namespace TRPO_pr9
         {
             NavigationService.Navigate(new EditPage(CurrentPatient, Patients));
         }
-
-        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeHelper.Toggle();
-        }
     }
 }

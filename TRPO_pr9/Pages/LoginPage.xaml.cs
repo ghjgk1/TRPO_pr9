@@ -49,10 +49,5 @@ namespace TRPO_pr9
             MessageBox.Show("Вход выполнен успешно!", "Вход", MessageBoxButton.OK, MessageBoxImage.Information);
             NavigationService.Navigate(new MainPage(LoginDoctor));
         }
-
-        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeHelper.Toggle();
-        }
     }
 }

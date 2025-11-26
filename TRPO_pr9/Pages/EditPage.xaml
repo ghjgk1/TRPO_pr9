@@ -38,6 +38,5 @@
 
         <Button Grid.Row="4" Content="Изменить" Click="EditButton_Click"/>
         <Button Grid.Row="4" Grid.Column="1" Content="Сбросить" Click="ResetButton_Click"/>
-        <Button Grid.Row="5" Grid.ColumnSpan="2" Content="Смена темы" Click="ChangeThemeButton_Click"/>
     </Grid>
 </Page>

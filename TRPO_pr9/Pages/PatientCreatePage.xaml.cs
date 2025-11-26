@@ -47,10 +47,5 @@ namespace TRPO_pr9
         {
             NavigationService.GoBack();
         }
-
-        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeHelper.Toggle();
-        }
     }
 }

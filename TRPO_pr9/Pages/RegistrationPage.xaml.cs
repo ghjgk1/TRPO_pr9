@@ -38,10 +38,5 @@ namespace TRPO_pr9
                 MessageBox.Show("Все поля обязательны для заполнения. Пароль должен совпадать с подтверждением",
                     "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
-
-        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeHelper.Toggle();
-        }
     }
 }

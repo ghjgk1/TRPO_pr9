@@ -48,6 +48,5 @@
 
 
         <Button Grid.Row="6" Grid.ColumnSpan="2" Content="Зарегистрироваться" Click="UserRegButton_Click"/>
-        <Button Grid.Row="7" Grid.ColumnSpan="2" Content="Сменить тему" Click="ChangeThemeButton_Click"/>
     </Grid>
 </Page>

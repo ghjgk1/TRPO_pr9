@@ -63,10 +63,5 @@ namespace TRPO_pr9
                 MessageBox.Show("Сначала выберите пациента",
                 "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
         }
-
-        private void ChangeThemeButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThemeHelper.Toggle();
-        }
     }
 }
