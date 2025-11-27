@@ -55,6 +55,22 @@ namespace TRPO_pr9
                 NavigationService.GoBack();
         }
 
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SelectedPatient == null)
+            {
+                MessageBox.Show("Сначала выберите пациента",
+                        "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if (MessageBox.Show("Хотите ли удалить пользователя", "Потдверждение выхода", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                File.Delete($"..\\net8.0-windows\\Patient\\P_{SelectedPatient.ID}.json");
+                Patients.Remove(SelectedPatient);
+            }
+        }
+
         private void PatientEditButton_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedPatient != null)

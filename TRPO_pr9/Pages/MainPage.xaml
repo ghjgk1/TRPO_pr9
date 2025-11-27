@@ -19,10 +19,11 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.ColumnSpan="2" Style="{StaticResource HorizonalStackPanel}">
-            <Button Content="Создать пациента" Style="{StaticResource MainPageButton}" Click="PatientCreateButton_Click"/>
+            <Button Style="{StaticResource AddButton}" Click="PatientCreateButton_Click"/>
             <Button Content="Начать прием" Style="{StaticResource MainPageButton}" Click="InspectionButton_Click"/>
             <Button Content="Изменить информацию" Style="{StaticResource MainPageButton}" Click="PatientEditButton_Click"/>
             <Button Content="Выход" Style="{StaticResource MainPageButton}" Click="BackButton_Click"/>
+            <Button Style="{StaticResource DeleteButton}" Click="DeleteButton_Click"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" DataContext="{Binding CurrentDoctor}">
